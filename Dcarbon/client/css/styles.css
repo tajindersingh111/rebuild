@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    background: linear-gradient(135deg, #f0f4f8 0%, #dde4eb 100%);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    background-color: #e7e9f2;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #2d2d2d;
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.remember-me label {
+    color: #2d2d2d;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forgot-password a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+@media screen and (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .input-group input {
+        padding: 10px 10px 10px 35px;
+    }
+
+    .input-group label {
+        left: 5px;
+    }
+}
+
+/* Highlighting and hover message for input fields */
+input[type="email"],
+input[type="password"] {
+    position: relative;
+}
+
+input[type="email"]::before,
+input[type="password"]::before {
+    content: "Please fill out this field";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 3px;
+    color: #333;
+    font-size: 0.8rem;
+    display: none;
+    white-space: nowrap;
+}
+
+input[type="email"]:hover::before,
+input[type="password"]:hover::before {
+    display: block;
+}
+
+/* Button hover effect */
+.btn-submit {
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+    text-align: left; /* Aligning button to the left */
+    width: 150px;
+    height: 50px;
+}
+
+.btn-submit:hover {
+    transform: scale(1.05);
+}
+
+/* Reset password page specific alignment */
+form {
+    text-align: left;
+}
+
+/* Aligning the buttons to the left */
+form button,
+form .forgot-password a {
+    display: inline-block;
+    text-align: left;
+    margin: 0.5rem 0;
+}
+
+form .forgot-password {
+    margin-bottom: 1rem;
+}
+
+
+
+
